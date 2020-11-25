@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+    pixelflut-server:
+        build:
+            context: cmd/pixelflut-server/
+        restart: always
+        ports:
+            - "1337:1337"
+        networks:
+        - web
+networks:
+  web:
+    external:
+      name: web
